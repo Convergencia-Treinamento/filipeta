@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-02-23T16:49:22 -->
+<!-- 2017-02-24T15:00:40 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94b055ce-666d-47fb-b035-6efd3e2377bb">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="filipeta" class="java.util.Map"/>
@@ -20,15 +20,8 @@
 				<textFieldExpression><![CDATA[$P{filipeta}.get("nome")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="70" y="80" width="210" height="33" uuid="1b4736b5-02d6-42f8-9b60-3b31ceae1a79"/>
+				<reportElement x="71" y="100" width="159" height="33" uuid="1b4736b5-02d6-42f8-9b60-3b31ceae1a79"/>
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto")
-
-]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="70" y="138" width="190" height="33" uuid="fd933538-916f-4d40-8d71-fc9b6d6ec70e"/>
-				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(1).get("txDesconto")
-
 ]]></textFieldExpression>
 			</textField>
 		</band>

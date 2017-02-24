@@ -2,3 +2,6 @@
 *.classpath
 */.settings
 /bin/
+/.settings/
+/.project
+/filipetagerada.pdf

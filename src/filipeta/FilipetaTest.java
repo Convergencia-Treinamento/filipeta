@@ -83,11 +83,11 @@ public class FilipetaTest {
 
 		mapa.put("cpf","999.999.999-99");
 
-		Map<String, Object> filipeta = new HashMap<String, Object>();
-		filipeta.put("filipeta", mapa);
-
 		List<Map<String, Object>> validades = new ArrayList<Map<String,Object>>();
 		mapa.put("validades", validades);
+		
+		Map<String, Object> filipeta = new HashMap<String, Object>();
+		filipeta.put("filipeta", mapa);
 
 		Map<String, Object> validade1 = new HashMap<String, Object>();
 		validade1.put("validade1", "28/11/2016");
@@ -100,8 +100,9 @@ public class FilipetaTest {
 		JasperExportManager.exportReportToPdfFile(print, "filipetagerada.pdf");
 		System.out.println("Relatório gerado.");
 		
+		
 		//((java.util.Map)((java.util.List)mapa.get("itens")).get(0)).get("txDesconto");
-		//((java.util.Map)((java.util.List)mapa.get("itens")).get(1)).get("txDesconto");
+		((java.util.Map)((java.util.List)mapa.get("itens")).get(1)).get("txDesconto");
 	}
 
 }
