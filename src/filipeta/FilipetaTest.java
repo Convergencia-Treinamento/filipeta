@@ -49,7 +49,7 @@ public class FilipetaTest {
 		itens.add(item3);
 		item3.put("txDesconto", "15");
 		item3.put("linhaCategoria", "categoria 3");
-		linha3.put("linha1", "remedios");
+		linha3.put("linha1", "conveniência");
 		linha3.put("linha2", "teste3");
 		item3.put("linhaMarca3", linha3);
 
@@ -66,7 +66,7 @@ public class FilipetaTest {
 		Map<String, Object> linha5 = new HashMap<String, Object>();
 		itens.add(item5);
 		item5.put("txDesconto", "10");
-		item5.put("linhaCategoria", "categoria 4");
+		item5.put("linhaCategoria", "categoria 5");
 		linha5.put("linha1", "remedios");
 		linha5.put("linha2", "teste2");
 		item5.put("linhaMarca5", linha5);
