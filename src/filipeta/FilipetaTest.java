@@ -101,8 +101,8 @@ public class FilipetaTest {
 		System.out.println("Relatório gerado.");
 		
 		
-		//((java.util.Map)((java.util.List)mapa.get("itens")).get(0)).get("txDesconto");
-		((java.util.Map)((java.util.List)mapa.get("itens")).get(1)).get("txDesconto");
+		//((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto");
+		//((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto");
 	}
 
 }
