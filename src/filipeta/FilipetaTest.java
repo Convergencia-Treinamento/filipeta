@@ -58,7 +58,7 @@ public class FilipetaTest {
 		itens.add(item4);
 		item4.put("txDesconto", "10");
 		item4.put("linhaCategoria", "categoria 4");
-		linha4.put("linha1", "remedios");
+		linha4.put("linha1", "cosmeticos");
 		linha4.put("linha2", "teste4");
 		item4.put("linhaMarca4", linha4);
 
@@ -67,8 +67,8 @@ public class FilipetaTest {
 		itens.add(item5);
 		item5.put("txDesconto", "10");
 		item5.put("linhaCategoria", "categoria 5");
-		linha5.put("linha1", "remedios");
-		linha5.put("linha2", "teste2");
+		linha5.put("linha1", "caixa");
+		linha5.put("linha2", "teste5");
 		item5.put("linhaMarca5", linha5);
 
 		List<Map<String, Object>> ofertas = new ArrayList<Map<String,Object>>();
