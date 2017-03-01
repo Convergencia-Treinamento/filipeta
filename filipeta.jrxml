@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-03-01T13:29:05 -->
+<!-- 2017-03-01T14:34:39 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94b055ce-666d-47fb-b035-6efd3e2377bb">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="filipeta" class="java.util.Map"/>
@@ -14,14 +14,14 @@
 		<band height="79" splitType="Stretch"/>
 	</title>
 	<pageHeader>
-		<band height="518" splitType="Stretch">
+		<band height="544" splitType="Stretch">
 			<textField>
 				<reportElement x="70" y="20" width="159" height="33" uuid="cda866b5-f532-4a7f-a9d4-783943c042b8"/>
-				<textFieldExpression><![CDATA[$P{filipeta}.get("nome")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{filipeta}.get("nome") + ", essas são as nossas ofertas exclusivas para você."]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="65" y="80" width="169" height="31" uuid="1b4736b5-02d6-42f8-9b60-3b31ceae1a79"/>
-				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto") +" de desconto" ]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="67" y="174" width="170" height="30" uuid="5989f88d-4b19-4307-8010-71fdbd6ed560"/>
@@ -56,17 +56,17 @@
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("linhaCategoria")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="270" y="120" width="170" height="30" uuid="f90c0443-422e-4050-b9ab-5b80b895d82e"/>
+				<reportElement x="270" y="110" width="170" height="30" uuid="f90c0443-422e-4050-b9ab-5b80b895d82e"/>
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("linhaMarca1")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="66" y="218" width="170" height="30" uuid="5eda286c-ea1e-4ace-bd32-6bd151c7b940">
+				<reportElement x="66" y="213" width="170" height="30" uuid="5eda286c-ea1e-4ace-bd32-6bd151c7b940">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(1)).get("linhaCategoria")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="270" y="218" width="170" height="30" uuid="060a55a6-d2ae-478a-bd3e-4d02350107d1">
+				<reportElement x="270" y="212" width="170" height="30" uuid="060a55a6-d2ae-478a-bd3e-4d02350107d1">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
@@ -100,15 +100,43 @@
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(4)).get("linhaMarca5")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="66" y="260" width="171" height="30" uuid="c37ad5ff-ca7d-47fe-8333-fc4c03cfc95b"/>
+				<reportElement x="59" y="255" width="171" height="30" uuid="c37ad5ff-ca7d-47fe-8333-fc4c03cfc95b"/>
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(1)).get("linhaMarca2")]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="272" y="260" width="170" height="31" uuid="b39d03cd-0f52-4f69-a935-c30b92787785">
+				<reportElement x="272" y="254" width="170" height="31" uuid="b39d03cd-0f52-4f69-a935-c30b92787785">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(2)).get("linhaMarca3")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="196" y="470" width="170" height="31" uuid="f77df420-d5d1-4b57-bc10-5dfcb106b04a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("ofertas")).get(0)).get("produto1")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="470" width="170" height="31" uuid="aea9ef89-956f-4c55-a6f9-e33885d90d06">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("ofertas")).get(0)).get("valor1")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="510" width="170" height="31" uuid="ced9cdb7-8ee3-416d-a2df-496cc8b2ea48">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("ofertas")).get(0)).get("produto2")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="510" width="170" height="31" uuid="52610157-080d-4af0-9dd4-fa188186d6c2">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("ofertas")).get(0)).get("valor2")]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
@@ -122,14 +150,23 @@
 		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="59" splitType="Stretch">
+		<band height="114" splitType="Stretch">
 			<textField>
 				<reportElement x="71" y="13" width="159" height="33" uuid="3ee278bc-f555-4354-9c86-2149a4f5f1fa"/>
-				<textFieldExpression><![CDATA[$P{filipeta}.get("cpf")]]></textFieldExpression>
+				<textFieldExpression><![CDATA["CPF " + $P{filipeta}.get("cpf")]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="238" y="80" width="170" height="30" uuid="27a3142a-4f2e-4fbc-a039-9ef2cc2a611b"/>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("validades")).get(0)).get("validade1")+ " a "+ ((java.util.Map)((java.util.List)$P{filipeta}.get("validades")).get(0)).get("validade2")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="60" width="100" height="30" uuid="b773a5a2-9bc3-404d-8f0f-a4a2570fcc66"/>
+				<text><![CDATA[Validades das ofertas
+]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="96" splitType="Stretch"/>
+		<band height="79" splitType="Stretch"/>
 	</summary>
 </jasperReport>

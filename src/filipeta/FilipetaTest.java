@@ -78,7 +78,7 @@ public class FilipetaTest {
 		oferta1.put("produto1", "fralda");
 		oferta1.put("valor1","9,99");
 		oferta1.put("produto2", "fralda");
-		oferta1.put("valor2","9,99");
+		oferta1.put("valor2","8,99");
 		ofertas.add(oferta1);
 
 		mapa.put("cpf","999.999.999-99");
