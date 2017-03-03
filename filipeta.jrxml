@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-03-02T17:14:20 -->
+<!-- 2017-03-03T16:45:49 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="94b055ce-666d-47fb-b035-6efd3e2377bb">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
@@ -159,21 +159,21 @@
 			</rectangle>
 			<textField>
 				<reportElement x="147" y="70" width="94" height="31" uuid="1b4736b5-02d6-42f8-9b60-3b31ceae1a79"/>
-				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto") +" de desconto"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[((java.util.Map)($P{filipeta}.get("destaqueCima")).get(1)).get("txDesconto")+" de desconto"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="285" y="68" width="84" height="22" uuid="44f6cc87-f220-4747-b1d0-f425ac347a8d">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("linhaCategoria")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{destaqueCima}.get("destaqueCima")).get(0)).get("linhaCategoria")]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement stretchType="RelativeToTallestObject" x="285" y="82" width="84" height="32" uuid="f90c0443-422e-4050-b9ab-5b80b895d82e">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("linhaMarca1")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[((java.util.Map)((java.util.List)$P{destaqueCima}.get("destaqueCima")).get(0)).get("linhaMarca1")]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement stretchType="RelativeToTallestObject" x="140" y="111" width="119" height="129" uuid="3cb1f9b6-709b-4d25-98e5-252d82179f63">
