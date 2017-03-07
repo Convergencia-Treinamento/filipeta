@@ -20,9 +20,11 @@ public class FilipetaTest {
 
 
 	public static void main(String[] args) throws JRException {
-		Map<String, Object> mapa = new HashMap<String, Object>();
-		mapa.put("nome", "Morgana Matheus M Andrade");
+		Map<String, Object> filipeta = new HashMap<String, Object>();
+		
+		filipeta.put("nome", "Morgana Matheus M Andrade");
         
+		Map<String, Object> mapa = new HashMap<String, Object>();
 		List<Map<String, Object>> itens = new ArrayList<Map<String,Object>>();
         
 		Map<String, Object> destaqueCima = new HashMap<String, Object>();
@@ -30,8 +32,7 @@ public class FilipetaTest {
 		destaqueCima.put("linhaCategoria", "categoria 1");
 		destaqueCima.put("linha1", "perfume");
 		destaqueCima.put("linha2", "teste1");
-		mapa.put("destaqueCima", destaqueCima);
-		System.out.println(mapa);
+		filipeta.put("destaqueCima", destaqueCima);
 
 		Map<String, Object> item2 = new HashMap<String, Object>();
 		Map<String, Object> linha2 = new HashMap<String, Object>();
@@ -75,28 +76,34 @@ public class FilipetaTest {
 		Map<String, Object> destaqueBaixo = new HashMap<String, Object>();
 		destaqueBaixo.put("produto1", "fralda");
 		destaqueBaixo.put("valor1","9,99");
-		destaqueBaixo.put("produto2", "fralda");
+		destaqueBaixo.put("produto2", "fraldão");
 		destaqueBaixo.put("valor2","8,99");
-		mapa.put("destaqueBaixo", destaqueBaixo);
+		filipeta.put("destaqueBaixo", destaqueBaixo);
 
-		mapa.put("cpf","999.999.999-99");
+		filipeta.put("cpf","999.999.999-99");
 
-		List<Map<String, Object>> validades = new ArrayList<Map<String,Object>>();
-		mapa.put("validades", validades);
+		//List<Map<String, Object>> validades = new ArrayList<Map<String,Object>>();
+		
 
-		Map<String, Object> filipeta = new HashMap<String, Object>();
-		filipeta.put("filipeta", mapa);
+	
+		//filipeta.put("filipeta", mapa);
 
 		Map<String, Object> validade1 = new HashMap<String, Object>();
 		validade1.put("validade1", "28/11/2016");
 		validade1.put("validade2", "04/12/2016");
-		validades.add(validade1);
+		filipeta.put("validades", validade1);
         
+		System.out.println(filipeta);
+		
+		Map<String, Object> parametros = new HashMap<String, Object>();
+		parametros.put("filipeta", filipeta);
 		// compilacao do JRXML
 		JasperReport report = JasperCompileManager.compileReport("filipeta.jrxml");
-		JasperPrint print = JasperFillManager.fillReport(report, filipeta);
+		JasperPrint print = JasperFillManager.fillReport(report, parametros);
 		JasperExportManager.exportReportToPdfFile(print, "filipetagerada.pdf");
 		System.out.println("Relatório gerado.");
+		
+		
 		
 		//((java.util.Map)($P{filipeta}.get("destaqueCima")).get(1)).get("txDesconto")+" de desconto"		 
 		//((java.util.Map)($P{filipeta}.get("destaqueCima")).get(0)).get("txDesconto")+" de desconto"
