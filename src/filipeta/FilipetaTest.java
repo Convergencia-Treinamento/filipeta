@@ -1,6 +1,5 @@
 package filipeta;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +19,8 @@ public class FilipetaTest {
 
 	public static void main(String[] args) throws JRException {
 		Map<String, Object> filipeta = new HashMap<String, Object>();
+		
+		filipeta.put("topo", "http://www.agenciadosite.com.br/wp-content/uploads/2014/07/logo-essencialperfumes-300x225.jpg");
 		
 		filipeta.put("nome", "Morgana Matheus M Andrade");
         
@@ -64,72 +65,16 @@ public class FilipetaTest {
 		destaqueCima.put("linhaCategoria", "categoria 1");
 		destaqueCima.put("linha1", "perfume");
 		destaqueCima.put("linha2", "teste1");
-		filipeta.put("destaqueCima", destaqueCima);
-
-		/*//Map<String, Object> item2 = new HashMap<String, Object>();
-		List<Map<String,Object>> detail = new ArrayList<Map<String,Object>>();
-		Map<String, Object> linha2 = new HashMap<String, Object>();
-		Map<String, Object> item2 = new HashMap<String, Object>();
-		detail.add(item2);
-		item2.put("txDesconto", "10");
-		item2.put("linhaCategoria", "categoria 2");
-		linha2.put("linha1", "remedios");
-		linha2.put("linha2", "teste2");
-		item2.put("linhaMarca2", linha2);
-		filipeta.put("detail", item2);
+		filipeta.put("destaqueCima", destaqueCima);		
 		
-		
-
-		Map<String, Object> item3 = new HashMap<String, Object>();
-		Map<String, Object> linha3 = new HashMap<String, Object>();
-		detail.add(item3);
-		item3.put("txDesconto", "15");
-		item3.put("linhaCategoria", "categoria 3");
-		linha3.put("linha1", "conveniência");
-		linha3.put("linha2", "teste3");
-		item3.put("linhaMarca3", linha3);
-		filipeta.put("detail", item3);
-
-		Map<String, Object> item4 = new HashMap<String, Object>();
-		Map<String, Object> linha4 = new HashMap<String, Object>();
-		detail.add(item4);
-		item4.put("txDesconto", "10");
-		item4.put("linhaCategoria", "categoria 4");
-		linha4.put("linha1", "cosmeticos");
-		linha4.put("linha2", "teste4");
-		item4.put("linhaMarca4", linha4);
-		filipeta.put("detail", item4);
-
-		Map<String, Object> item5 = new HashMap<String, Object>();
-		Map<String, Object> linha5 = new HashMap<String, Object>();
-		detail.add(item5);
-		item5.put("txDesconto", "10");
-		item5.put("linhaCategoria", "categoria 5");
-		linha5.put("linha1", "caixa");
-		linha5.put("linha2", "teste5");
-		item5.put("linhaMarca5", linha5);
-		filipeta.put("detail", item5);
-		
-		for (Map<String, Object> map : detail) {
-		System.out.println(map);
-		}*/
-		
-		//List<Map<String, Object>> ofertas = new ArrayList<Map<String,Object>>();
-
 		Map<String, Object> destaqueBaixo = new HashMap<String, Object>();
-		destaqueBaixo.put("produto1", "fralda");
+		destaqueBaixo.put("produto1", "Fralda");
 		destaqueBaixo.put("valor1","9,99");
-		destaqueBaixo.put("produto2", "fraldão");
+		destaqueBaixo.put("produto2", "Rivotril");
 		destaqueBaixo.put("valor2","8,99");
 		filipeta.put("destaqueBaixo", destaqueBaixo);
 
 		filipeta.put("cpf","999.999.999-99");
-
-		//List<Map<String, Object>> validades = new ArrayList<Map<String,Object>>();
-		
-
-	
-		//filipeta.put("filipeta", mapa);
 
 		Map<String, Object> validade1 = new HashMap<String, Object>();
 		validade1.put("validade1", "28/11/2016");
@@ -140,9 +85,6 @@ public class FilipetaTest {
 		
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put("filipeta", filipeta);
-		//System.out.println(detail.get(0));
-		
-		//System.out.println(parametros);
 		
 		
 		JRBeanCollectionDataSource jrbcd = new JRBeanCollectionDataSource(itens);
