@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-03-15T17:32:50 -->
+<!-- 2017-03-20T17:34:47 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="94b055ce-666d-47fb-b035-6efd3e2377bb">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
@@ -152,15 +152,18 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="62" splitType="Stretch">
+		<band height="53" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
 				<reportElement positionType="Float" x="149" y="20" width="223" height="33" uuid="cda866b5-f532-4a7f-a9d4-783943c042b8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{filipeta}.get("nome") + ", essas são as nossas ofertas exclusivas para você."]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="98" splitType="Stretch">
+		<band height="92" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<frame>
@@ -168,13 +171,6 @@
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
-				<textField isStretchWithOverflow="true">
-					<reportElement stretchType="RelativeToTallestObject" x="20" y="17" width="94" height="31" uuid="b8ca129c-36b7-47e8-bdf1-2180d73841c1"/>
-					<textElement>
-						<font size="18" isBold="true"/>
-					</textElement>
-					<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("destaqueCima")).get("txDesconto") + "%"]]></textFieldExpression>
-				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement stretchType="RelativeToTallestObject" x="134" y="52" width="84" height="22" uuid="278d0d88-6048-4145-9d13-049996ae8a59">
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
@@ -189,147 +185,100 @@
 					</reportElement>
 					<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("destaqueCima")).get("linhaCategoria")]]></textFieldExpression>
 				</textField>
+				<textField>
+					<reportElement x="13" y="18" width="100" height="30" uuid="d18b8242-6202-4d5e-8cef-3ab4f793b035"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("destaqueCima")).get("txDesconto") + " %"]]></textFieldExpression>
+				</textField>
 			</frame>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="265" splitType="Stretch">
+		<band height="134" splitType="Stretch">
 			<rectangle>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="141" y="-8" width="122" height="125" uuid="3171cbdf-11a3-462c-a3fa-9244a6f8973e"/>
+				<reportElement key="" style="Table_TH" positionType="Float" stretchType="RelativeToTallestObject" x="141" y="1" width="122" height="125" uuid="3171cbdf-11a3-462c-a3fa-9244a6f8973e"/>
 			</rectangle>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="152" y="-1" width="100" height="17" uuid="cf87401e-c409-4a92-a328-9667aeb4e4f9"/>
+				<reportElement positionType="Float" x="152" y="9" width="100" height="17" uuid="cf87401e-c409-4a92-a328-9667aeb4e4f9"/>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("txDesconto") + "%"
-
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("txDesconto") + "%"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="153" y="21" width="100" height="30" uuid="4c40982f-390c-45d0-9ef8-7fd1b57db74e"/>
+				<reportElement x="153" y="31" width="100" height="30" uuid="4c40982f-390c-45d0-9ef8-7fd1b57db74e"/>
 				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linhaCategoria")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="153" y="47" width="100" height="30" uuid="ba1f5845-8065-43c4-82b3-d87323d9f78e"/>
+				<reportElement x="153" y="57" width="100" height="30" uuid="ba1f5845-8065-43c4-82b3-d87323d9f78e"/>
 				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linha1")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="153" y="78" width="100" height="30" uuid="40f80dcc-fcc6-4a0a-a5c3-fcc9df1c20b7"/>
+				<reportElement x="153" y="88" width="100" height="30" uuid="40f80dcc-fcc6-4a0a-a5c3-fcc9df1c20b7"/>
 				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linha2")]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="263" y="-8" width="117" height="125" uuid="0d262b38-cc00-4a5f-9059-6497baf2a52f"/>
+				<reportElement key="" style="Table_TH" positionType="Float" stretchType="RelativeToTallestObject" x="263" y="1" width="117" height="125" uuid="5f908996-39c4-4793-a21e-b280c5c107ee"/>
 			</rectangle>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="274" y="-1" width="100" height="17" uuid="2b84111b-92b5-4362-b9f2-14eabfc33c77"/>
+				<reportElement x="273" y="58" width="100" height="30" uuid="4b698f7f-d59a-4f63-bdd8-839501232ef4"/>
+				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linha1")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="272" y="10" width="100" height="17" uuid="7cb3131e-1faa-4a9f-9528-d971e5809e0e"/>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("txDesconto") + "%"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="274" y="20" width="100" height="30" uuid="f7720cfe-4bfb-4924-af31-81edbc095485"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linhaCategoria")]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="274" y="48" width="100" height="30" uuid="70de7fc9-b15d-447a-9341-834479541d73"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linha1")]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="274" y="78" width="100" height="30" uuid="68deb8a1-c7f8-4467-b3f6-384dec776a6c"/>
+				<reportElement x="273" y="89" width="100" height="30" uuid="498f6184-d9af-4643-b92d-07b8b2bdbff4"/>
 				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linha2")]]></textFieldExpression>
 			</textField>
-			<rectangle>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="263" y="112" width="117" height="125" uuid="8b6531c0-ea47-4fee-ba6f-446ec9c5eaf9"/>
-			</rectangle>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="271" y="126" width="100" height="30" uuid="049726ba-e33a-4ac0-9cda-3a983c269355">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textElement>
-					<font size="18" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("txDesconto1") + "%"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="271" y="156" width="100" height="30" uuid="9807be38-de33-481f-ae49-171bb2574556">
-					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linhaCategoria1")]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="274" y="182" width="100" height="20" uuid="d1cf8b00-8eb1-48c1-b4b9-cc7ca56f3066"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linha3")]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="274" y="209" width="100" height="20" uuid="cc845a5a-8da4-4c95-933d-54548d78ab01"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linha4")]]></textFieldExpression>
-			</textField>
-			<rectangle>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="141" y="112" width="122" height="125" uuid="e5363eb9-5083-4d39-a4bb-f0cf3c8b60db"/>
-			</rectangle>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="149" y="126" width="100" height="30" isRemoveLineWhenBlank="true" uuid="ca71fed2-596e-484e-878f-2b0b0b6697a4"/>
-				<textElement>
-					<font size="18" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("txDesconto1") + "%"
-]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="149" y="156" width="100" height="30" uuid="cfce6f33-d539-4ca7-8b13-862a61503898"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linhaCategoria1")
-]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="150" y="182" width="100" height="20" uuid="f693b5b1-60cb-4627-aa29-603951735ed4"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linha3")
-]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="150" y="208" width="100" height="20" uuid="62c415f1-fd43-45e9-b2a6-7b3d9bd86d97"/>
-				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("esquerda")).get("linha4")
-]]></textFieldExpression>
+				<reportElement x="273" y="32" width="100" height="30" uuid="635bcb03-47a4-4162-9375-6d8431764c57"/>
+				<textFieldExpression><![CDATA[((java.util.Map)$F{data}.get("direita")).get("linhaCategoria")]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="140" splitType="Stretch">
+		<band height="100" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<rectangle>
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="140" y="-10" width="239" height="100" uuid="ad6959ac-96a5-4931-a375-305efb343463"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="141" y="0" width="239" height="100" uuid="ad6959ac-96a5-4931-a375-305efb343463"/>
 			</rectangle>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="285" y="56" width="73" height="30" uuid="6197c28e-59d5-426b-b0ef-da44b5bfb44c">
+				<reportElement x="286" y="66" width="73" height="30" uuid="6197c28e-59d5-426b-b0ef-da44b5bfb44c">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA["R$" + ((java.util.Map)$P{filipeta}.get("destaqueBaixo")).get("valor2")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="186" y="21" width="75" height="30" uuid="81e33860-7852-4d6e-9a73-41235edbdbab">
+				<reportElement x="187" y="31" width="75" height="30" uuid="81e33860-7852-4d6e-9a73-41235edbdbab">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("destaqueBaixo")).get("produto1")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="285" y="25" width="73" height="30" uuid="94839b64-6f2d-40f5-8bac-d3d99a0c12c8">
+				<reportElement x="286" y="35" width="73" height="30" uuid="94839b64-6f2d-40f5-8bac-d3d99a0c12c8">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA["R$" + ((java.util.Map)$P{filipeta}.get("destaqueBaixo")).get("valor1")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="186" y="56" width="75" height="30" uuid="0dcd0cbc-31b7-45c6-8ef8-35ef63df9f34">
+				<reportElement x="187" y="66" width="75" height="30" uuid="0dcd0cbc-31b7-45c6-8ef8-35ef63df9f34">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("destaqueBaixo")).get("produto2")]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="209" y="0" width="100" height="20" uuid="eff2f116-1c99-4161-8998-22b85dccf043"/>
+				<reportElement x="210" y="10" width="100" height="20" uuid="eff2f116-1c99-4161-8998-22b85dccf043"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 					<paragraph lineSpacing="AtLeast"/>
@@ -339,20 +288,20 @@
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="114" splitType="Stretch">
+		<band height="100" splitType="Stretch">
 			<rectangle>
-				<reportElement x="142" y="5" width="239" height="100" uuid="51cd7950-b011-46c2-9ead-aa4345daeee4"/>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="141" y="0" width="239" height="100" uuid="51cd7950-b011-46c2-9ead-aa4345daeee4"/>
 			</rectangle>
-			<textField>
-				<reportElement x="208" y="10" width="141" height="20" uuid="3ee278bc-f555-4354-9c86-2149a4f5f1fa"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="209" y="10" width="141" height="20" uuid="3ee278bc-f555-4354-9c86-2149a4f5f1fa"/>
 				<textFieldExpression><![CDATA["CPF " + $P{filipeta}.get("cpf")]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="193" y="57" width="170" height="30" uuid="27a3142a-4f2e-4fbc-a039-9ef2cc2a611b"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="194" y="57" width="170" height="30" uuid="27a3142a-4f2e-4fbc-a039-9ef2cc2a611b"/>
 				<textFieldExpression><![CDATA[((java.util.Map)$P{filipeta}.get("validades")).get("validade1") + "   a   "+ ((java.util.Map)$P{filipeta}.get("validades")).get("validade2")]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="208" y="40" width="100" height="17" uuid="b773a5a2-9bc3-404d-8f0f-a4a2570fcc66"/>
+				<reportElement x="209" y="40" width="100" height="17" uuid="b773a5a2-9bc3-404d-8f0f-a4a2570fcc66"/>
 				<text><![CDATA[Validades das ofertas
 ]]></text>
 			</staticText>

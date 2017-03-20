@@ -26,39 +26,49 @@ public class FilipetaTest {
         
 		List<DetailData> itens = new ArrayList<>();
 		
-		Map<String, Map<String, Object>> linha = new HashMap<String, Map<String,Object>>();
+		Map<String, Map<String, Object>> linha1 = new HashMap<String, Map<String,Object>>();
+		
 		Map<String, Object> esquerda = new HashMap<String, Object>();
 		esquerda.put("txDesconto", 10);
 		esquerda.put("linhaCategoria", "categoria 2");
 		esquerda.put("linha1", "remedios");
 		esquerda.put("linha2", "teste2");
-		linha.put("esquerda", esquerda);
+		linha1.put("esquerda", esquerda);
 		
 		Map<String, Object> direita = new HashMap<String, Object>();
 		direita.put("txDesconto", 15);
 		direita.put("linhaCategoria", "categoria 3");
 		direita.put("linha1", "conveniência");
 		direita.put("linha2", "teste3");
-		linha.put("direita", direita);
-		
-		esquerda.put("txDesconto1", "10");
-		esquerda.put("linhaCategoria1", "categoria 4");
-		esquerda.put("linha3", "cosmeticos");
-		esquerda.put("linha4", "teste4");
-		
-		direita.put("txDesconto1", 10);
-		direita.put("linhaCategoria1", "categoria 5");
-		direita.put("linha3", "caixa");
-		direita.put("linha4", "teste3");
-		linha.put("direita", direita);
+		linha1.put("direita", direita);
+
 		
 		DetailData dd = new DetailData();
-		dd.setData(linha);
+		dd.setData(linha1);
 		itens.add(dd);
 		
-		for (DetailData detailData : itens) {
-			System.out.println(detailData.getData());
-		}
+		Map<String, Map<String, Object>> linha2 = new HashMap<String, Map<String,Object>>();
+		
+		Map<String, Object> esquerda2 = new HashMap<String, Object>();
+		esquerda2.put("txDesconto", 10);
+		esquerda2.put("linhaCategoria", "categoria 4");
+		esquerda2.put("linha1", "remedios");
+		esquerda2.put("linha2", "teste2");
+		linha2.put("esquerda2", esquerda2);
+		
+		Map<String, Object> direita2 = new HashMap<String, Object>();
+		direita2.put("txDesconto", 15);
+		direita2.put("linhaCategoria", "categoria 5");
+		direita2.put("linha1", "conveniência");
+		direita2.put("linha2", "teste3");
+		linha2.put("direita2", direita2);
+
+		
+		DetailData dd2 = new DetailData();
+		dd2.setData(linha2);
+		itens.add(dd2);
+		
+		
        
 		Map<String, Object> destaqueCima = new HashMap<String, Object>();
 		destaqueCima.put("txDesconto", "20");
@@ -80,12 +90,12 @@ public class FilipetaTest {
 		validade1.put("validade1", "28/11/2016");
 		validade1.put("validade2", "04/12/2016");
 		filipeta.put("validades", validade1);
-        
-		
 		
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put("filipeta", filipeta);
 		
+		
+		System.out.println(parametros);
 		
 		JRBeanCollectionDataSource jrbcd = new JRBeanCollectionDataSource(itens);
 		// compilacao do JRXML
@@ -95,8 +105,8 @@ public class FilipetaTest {
 		System.out.println("Relatório gerado.");
 		
 		
-		
-		//((java.util.Map)($P{filipeta}.get("destaqueCima")).get(1)).get("txDesconto")+" de desconto"		 
+		//((java.util.Map)$F{data}.get("esquerda")).get("linha1")
+		//((java.util.Map)$F{data}.get("esquerda")).get("linhaCategoria")"		 
 		//((java.util.Map)($P{filipeta}.get("destaqueCima")).get(0)).get("txDesconto")+" de desconto"
 		//((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto");
 		//((java.util.Map)((java.util.List)$P{filipeta}.get("itens")).get(0)).get("txDesconto");
