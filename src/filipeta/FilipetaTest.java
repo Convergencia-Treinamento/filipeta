@@ -46,6 +46,7 @@ public class FilipetaTest {
 		DetailData dd = new DetailData();
 		dd.setData(linha1);
 		itens.add(dd);
+		itens.add(dd);
 		
 		Map<String, Map<String, Object>> linha2 = new HashMap<String, Map<String,Object>>();
 		
@@ -54,14 +55,14 @@ public class FilipetaTest {
 		esquerda2.put("linhaCategoria", "categoria 4");
 		esquerda2.put("linha1", "remedios");
 		esquerda2.put("linha2", "teste2");
-		linha2.put("esquerda2", esquerda2);
+		linha2.put("esquerda", esquerda2);
 		
 		Map<String, Object> direita2 = new HashMap<String, Object>();
 		direita2.put("txDesconto", 15);
 		direita2.put("linhaCategoria", "categoria 5");
 		direita2.put("linha1", "conveniência");
 		direita2.put("linha2", "teste3");
-		linha2.put("direita2", direita2);
+		linha2.put("direita", direita2);
 
 		
 		DetailData dd2 = new DetailData();
